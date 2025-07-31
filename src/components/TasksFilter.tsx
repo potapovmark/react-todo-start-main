@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FilterType } from '../types/todo';
 
 interface TasksFilterProps {
@@ -26,4 +27,14 @@ export const TasksFilter: React.FC<TasksFilterProps> = ({
       ))}
     </ul>
   );
+};
+
+(TasksFilter as any).defaultProps = {
+  currentFilter: 'all',
+  onFilterChange: () => {},
+};
+
+(TasksFilter as any).propTypes = {
+  currentFilter: PropTypes.string.isRequired,
+  onFilterChange: PropTypes.func.isRequired,
 };

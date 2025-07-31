@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Task as TaskType } from '../types/todo';
 import { Task } from './Task';
 
@@ -32,4 +33,18 @@ export const TaskList: React.FC<TaskListProps> = ({
       ))}
     </ul>
   );
+};
+
+(TaskList as any).defaultProps = {
+  tasks: [],
+  onToggle: () => {},
+  onDelete: () => {},
+  onEdit: () => {},
+};
+
+(TaskList as any).propTypes = {
+  tasks: PropTypes.array.isRequired,
+  onToggle: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
 };

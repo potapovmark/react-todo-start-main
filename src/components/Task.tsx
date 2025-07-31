@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { format } from 'date-fns';
+import { formatDistanceToNow } from 'date-fns';
+import PropTypes from 'prop-types';
 import { Task as TaskType } from '../types/todo';
 
 interface TaskProps {
@@ -50,7 +51,7 @@ export const Task: React.FC<TaskProps> = ({
         <label>
           <span className="description">{task.description}</span>
           <span className="created">
-            created {format(task.createdAt, 'MMM d, yyyy')}
+            created {formatDistanceToNow(task.createdAt, { addSuffix: true })}
           </span>
         </label>
         <button
@@ -74,4 +75,23 @@ export const Task: React.FC<TaskProps> = ({
       )}
     </li>
   );
+};
+
+(Task as any).defaultProps = {
+  task: {
+    id: '',
+    description: '',
+    completed: false,
+    createdAt: new Date(),
+  },
+  onToggle: () => {},
+  onDelete: () => {},
+  onEdit: () => {},
+};
+
+(Task as any).propTypes = {
+  task: PropTypes.object.isRequired,
+  onToggle: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
 };

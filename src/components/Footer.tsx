@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Task as TaskType } from '../types/todo';
 import { TasksFilter } from './TasksFilter';
 import { FilterType } from '../types/todo';
@@ -40,4 +41,18 @@ export const Footer: React.FC<FooterProps> = ({
       )}
     </footer>
   );
+};
+
+(Footer as any).defaultProps = {
+  tasks: [],
+  currentFilter: 'all',
+  onFilterChange: () => {},
+  onClearCompleted: () => {},
+};
+
+(Footer as any).propTypes = {
+  tasks: PropTypes.array.isRequired,
+  currentFilter: PropTypes.string.isRequired,
+  onFilterChange: PropTypes.func.isRequired,
+  onClearCompleted: PropTypes.func.isRequired,
 };

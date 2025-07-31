@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 interface NewTaskFormProps {
   onAddTask: (description: string) => void;
@@ -30,4 +31,12 @@ export const NewTaskForm: React.FC<NewTaskFormProps> = ({ onAddTask }) => {
       </form>
     </header>
   );
+};
+
+(NewTaskForm as any).defaultProps = {
+  onAddTask: () => {},
+};
+
+(NewTaskForm as any).propTypes = {
+  onAddTask: PropTypes.func.isRequired,
 };
