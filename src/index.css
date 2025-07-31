@@ -214,10 +214,10 @@ body {
 }
 
 .todo-list li label {
-  word-break: break-all;
   padding: 15px 15px 15px 60px;
-  display: block;
-  align-self: c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   line-height: 1.2;
   transition: color 0.4s;
 }
@@ -225,6 +225,7 @@ body {
 .todo-list li label .created {
   font-size: 13px;
   color: #777;
+  margin-right: 80px;
 }
 
 .todo-list li label .description {
@@ -239,15 +240,17 @@ body {
 
 .todo-list li .icon {
   position: absolute;
-  top: 0;
-  bottom: -3px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 30px;
-  height: 40px;
-  font-size: 34px;
+  height: 30px;
+  font-size: 25px;
   color: #cc9a9a;
-  margin: auto 0 11px;
   transition: color 0.2s ease-out;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .todo-list li .icon:hover {
@@ -259,7 +262,8 @@ body {
 }
 
 .todo-list li .icon-destroy:after {
-  content: '×';
+  content: '✕';
+  line-height: 0.5;
 }
 
 .todo-list li .icon-edit {
@@ -269,6 +273,7 @@ body {
 
 .todo-list li .icon-edit:after {
   content: '✎';
+  line-height: 1;
 }
 
 .todo-list li .edit {
