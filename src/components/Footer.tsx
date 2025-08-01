@@ -42,10 +42,3 @@ export const Footer: React.FC<FooterProps> = ({
     </footer>
   );
 };
-
-(Footer as any).defaultProps = {
-  tasks: [],
-  currentFilter: 'all',
-  onFilterChange: () => {},
-  onClearCompleted: () => {},
-};
