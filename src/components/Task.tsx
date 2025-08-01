@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { formatDistanceToNow } from 'date-fns';
-import PropTypes from 'prop-types';
 import { Task as TaskType } from '../types/todo';
 
 interface TaskProps {

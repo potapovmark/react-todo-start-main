@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Task as TaskType } from '../types/todo';
 import { Task } from './Task';
 
