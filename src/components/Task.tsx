@@ -76,15 +76,3 @@ export const Task: React.FC<TaskProps> = ({
     </li>
   );
 };
-
-(Task as any).defaultProps = {
-  task: {
-    id: '',
-    description: '',
-    completed: false,
-    createdAt: new Date(),
-  },
-  onToggle: () => {},
-  onDelete: () => {},
-  onEdit: () => {},
-};

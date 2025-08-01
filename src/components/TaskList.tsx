@@ -34,10 +34,3 @@ export const TaskList: React.FC<TaskListProps> = ({
     </ul>
   );
 };
-
-(TaskList as any).defaultProps = {
-  tasks: [],
-  onToggle: () => {},
-  onDelete: () => {},
-  onEdit: () => {},
-};

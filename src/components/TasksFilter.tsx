@@ -28,8 +28,3 @@ export const TasksFilter: React.FC<TasksFilterProps> = ({
     </ul>
   );
 };
-
-(TasksFilter as any).defaultProps = {
-  currentFilter: 'all',
-  onFilterChange: () => {},
-};
