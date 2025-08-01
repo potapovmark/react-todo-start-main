@@ -88,10 +88,3 @@ export const Task: React.FC<TaskProps> = ({
   onDelete: () => {},
   onEdit: () => {},
 };
-
-(Task as any).propTypes = {
-  task: PropTypes.object.isRequired,
-  onToggle: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
-  onEdit: PropTypes.func.isRequired,
-};

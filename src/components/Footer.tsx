@@ -49,10 +49,3 @@ export const Footer: React.FC<FooterProps> = ({
   onFilterChange: () => {},
   onClearCompleted: () => {},
 };
-
-(Footer as any).propTypes = {
-  tasks: PropTypes.array.isRequired,
-  currentFilter: PropTypes.string.isRequired,
-  onFilterChange: PropTypes.func.isRequired,
-  onClearCompleted: PropTypes.func.isRequired,
-};

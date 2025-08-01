@@ -32,11 +32,3 @@ export const NewTaskForm: React.FC<NewTaskFormProps> = ({ onAddTask }) => {
     </header>
   );
 };
-
-(NewTaskForm as any).defaultProps = {
-  onAddTask: () => {},
-};
-
-(NewTaskForm as any).propTypes = {
-  onAddTask: PropTypes.func.isRequired,
-};

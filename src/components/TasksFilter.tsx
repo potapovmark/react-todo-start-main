@@ -33,8 +33,3 @@ export const TasksFilter: React.FC<TasksFilterProps> = ({
   currentFilter: 'all',
   onFilterChange: () => {},
 };
-
-(TasksFilter as any).propTypes = {
-  currentFilter: PropTypes.string.isRequired,
-  onFilterChange: PropTypes.func.isRequired,
-};

@@ -41,10 +41,3 @@ export const TaskList: React.FC<TaskListProps> = ({
   onDelete: () => {},
   onEdit: () => {},
 };
-
-(TaskList as any).propTypes = {
-  tasks: PropTypes.array.isRequired,
-  onToggle: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
-  onEdit: PropTypes.func.isRequired,
-};
